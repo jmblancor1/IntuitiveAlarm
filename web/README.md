@@ -1,4 +1,4 @@
-# Intuitive Alarms (Web)
+# Intuitive Alarms Web
 
 ¡Bienvenido(a) a la versión **web** de **Intuitive Alarms**! 🚀
 
