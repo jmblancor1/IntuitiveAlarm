@@ -1,38 +1,46 @@
 # 📱 Intuitive Alarms Móvil
 
-¡Bienvenido al Wiki de **Intuitive Alarms**! ⏰✨
+¡Bienvenido(a) a **Intuitive Alarms**! ⏰✨
 
-Intuitive Alarms es una app móvil diseñada para configurar alarmas personalizadas con mensajes de audio motivacionales que te ayudarán a empezar el día con energía.
+Esta aplicación **Android** fue desarrollada en **Kotlin** con **Jetpack Compose**. Permite configurar alarmas personalizadas con mensajes de voz motivacionales para ayudarte a despertar con energía.
 
 ## 📥 Descarga
 
 [Descargar APK desde Google Drive](https://drive.google.com/file/d/1ld0FnucsO7eyrrnIOLSOyF4A108H-PpH/view?usp=drive_link)
 
+---
+
 ## ✨ Funcionalidades
 
 - 🔔 **Alarmas Fáciles**: Configura alarmas rápidamente.
 - 🎤 **Mensajes Personalizados**: Graba tu voz para motivarte al despertar.
-- 🎨 **Interfaz Limpia**: Diseño simple e intuitivo.
+- 🎨 **Interfaz Intuitiva**: Diseño sencillo y amigable para el usuario.
 - 🔑 **Autenticación Opcional**: Inicia sesión o regístrate para personalizar tu experiencia.
+
+---
 
 ## 📱 Cómo Usarla
 
-1. **Inicio**: Selecciona entre "Iniciar Sesión" o "Registrarse".
-2. **Crear Alarma**: Personaliza la hora, título y añade mensajes motivacionales grabados.
-3. **Gestiona tus Alarmas**: Actívalas, modifícalas o elimínalas fácilmente desde la pantalla principal.
+1. **Pantalla de Inicio**: Elige entre "Iniciar Sesión" o "Registrarse".
+2. **Crear Alarma**: Ajusta la hora, elige un título y añade un mensaje motivacional.
+3. **Lista de Alarmas**: Activa, modifica o elimina tus alarmas de forma sencilla.
+
+---
 
 ## 🚀 Tecnología
 
-- **Android Jetpack Compose**
-- **Kotlin**
-- **Material Design 3**
-- **Soporte Angular**: Compatible con Angular 14, 15 y 16 (si se requiere integración híbrida o librerías compartidas).
+- **Android (Min SDK 21)**: Soporte a partir de Android 5.0 (Lollipop) en adelante.
+- **Kotlin**: Lenguaje principal.
+- **Jetpack Compose**: Framework de UI declarativa.
+- **Material Design 3**: Estándares de diseño.
 
-## 🤝 Colaboraciones
+---
 
-Puedes contribuir enviando pull requests con mejoras o correcciones.
+## 🤝 Contribuciones
 
-## 📄 Licencia
+Puedes contribuir enviando *pull requests* con mejoras, funcionalidades o correcciones.
 
-Este proyecto está licenciado bajo MIT.
+---
+
+¡Gracias por probar **Intuitive Alarms Móvil** y que tus mañanas estén llenas de motivación! 🎉
 
