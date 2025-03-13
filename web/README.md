@@ -32,12 +32,12 @@ Esta aplicación, construida con **Vue 2** y **Vue Router**, te ofrece una inter
    ```bash
    npm run serve
    ```
-4. **Abre tu navegador** en `http://localhost:8080` (o el puerto que aparezca).
 
-> **Nota**: Si deseas generar una versión para producción, ejecuta:
-> ```bash
-> npm run build
-> ```
+**Abre tu navegador** en `http://localhost:8080` (o el puerto que aparezca).
+
+## 🌐 Navegadores y Ajustes
+
+- Desarrollado y probado en **Google Chrome** versión `133.0.6943.98 (Build oficial) (arm64)`.  
 
 ---
 
