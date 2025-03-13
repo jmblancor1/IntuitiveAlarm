@@ -10,45 +10,38 @@
 ## :book: Descripción del Proyecto
 *Intuitive Alarms* es una aplicación diseñada para mejorar y personalizar la forma en que gestionamos nuestras alarmas diarias. Ofrece una experiencia intuitiva con menús simples, soporta vibración y aumento progresivo, y brinda recordatorios adaptados a diferentes necesidades.
 
-## :gear: Responsabilidades
+## :clipboard: Distribución de Responsabilidades
 
-### :iphone: Responsabilidades de Joyce (Aplicación Móvil)
-1. **Autenticación (App Móvil)**  
-   - Login para la app en dispositivos móviles.  
-   - Animaciones en botones, validación y llenado de campos.
+A continuación se presentan une resumen la asignación de responsabilidades en **Aplicación Móvil** y **Aplicación Web** a nivel general entre Joyce y Javier. 
 
-2. **Pantalla Principal / Home (App Móvil)**  
-   - Listado de alarmas.  
-   - Botón flotante (FAB) para añadir nuevas alarmas.  
-   - Diseño de la vista de alarmas y estados (activa/inactiva), animación de días de la semana y conexión con mensajes/ventanas para adicionar título, eliminar alarma y crear alarma.
 
-3. **Crear Alarma (App Móvil)**  
-   - Selección de hora, días de la semana y opción de vibración.  
-   - Confirmación de guardado y animación del data picker.
+---
 
-4. **Aporte de Joyce en Web**  
-   - **Propuesta de Color Web:** Colaboración en la definición de la paleta de colores para la interfaz, asegurando consistencia con la versión móvil.  
-   - **Autenticación (Web):**  
-     - Animaciones en validación de campos y botones.  
-     - Funcionalidades para recuperar clave (formulario, lógica y animación) y crear cuenta.
+## :iphone: Aplicación Móvil
 
-### :computer: Responsabilidades de Javier (Aplicación Web)
-1. **Panel / Dashboard Web**  
-   - Barra lateral o menú con secciones (Panel, Usuarios, Alarmas).  
-   - Listado de alarmas en tabla, botones de acción (crear, editar, eliminar) y animaciones en campos y botones.
+| **Tarea**                               | **Joyce** | **Javier** |
+|----------------------------------------|:--------:|:---------:|
+| Autenticación (App Móvil)             | ✅       |           |
+| Pantalla Principal / Home (App Móvil) | ✅       |           |
+| Crear Alarma (App Móvil)              | ✅       |           |
+| Recuperar Clave (Móvil)               |          | ✅        |
+| Registrarse (Móvil)                   |          | ✅        |
+| Grabación de Audio (Móvil)            |          | ✅        |
 
-2. **CRUD de Alarmas (Web)**  
-   - Funcionalidades para crear, listar y eliminar alarmas mediante formularios adaptados al navegador, con animaciones en la interacción.
+---
 
-3. **Gestión de Usuarios (Web)**  
-   - Listado, creación, edición y eliminación de usuarios, incluyendo modales de confirmación y animaciones en la diligencia de campos y botones.
+## :desktop_computer: Aplicación Web 
 
-4. **Aporte de Javier en Móvil**  
-   - **Recuperar Clave (Móvil):** Pantalla para restablecer la contraseña con notificaciones y animación.  
-   - **Registrarse (Móvil):** Pantalla de registro con animación en la interacción de campos y botones.  
-   - **Grabación de Audio (Móvil):**  
-     - Pantalla de grabación que incluye visualización de onda sonora y guardado del audio.  
-     - Confirmación de guardado y animación de la onda sonora con variantes.
+| **Tarea**                     | **Joyce** | **Javier** |
+|------------------------------|:--------:|:---------:|
+| Propuesta de Color  y creación proyecto base     | ✅       |           |
+| Autenticación (Web)          | ✅       |           |
+| Ajustes Generales (Web)      | ✅       |           |
+| Panel / Dashboard (Web)      |          | ✅        |
+| Gestión de Usuarios (Web)    |          | ✅        |
+| Configuración de Vistas (Web)|          | ✅        |
+
+---
 
 ## 🔗 Prototipos Interactivos
 
