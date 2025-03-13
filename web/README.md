@@ -22,7 +22,7 @@ Esta aplicación, construida con **Vue 2** y **Vue Router**, te ofrece una inter
 
 1. **Clona o descarga** este repositorio.
    ```bash
-   git clone https://github.com/tu-usuario/IntuitiveAlarmWeb.git
+   https://github.com/jmblancor1/IntuitiveAlarm.git
    ```
 2. **Instala dependencias** (dentro de la carpeta `web/`):
    ```bash
