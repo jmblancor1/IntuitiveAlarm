@@ -26,6 +26,7 @@ import co.edu.uniandes.intuitivealarms.viewmodel.MainSelectionViewModel
 @Composable
 fun MainSelectionScreen(
     onInicioClicked: () -> Unit = {},
+    onRegistrarseClicked: () -> Unit = {},  // <--- AQUÍ SE DEFINE LA LAMBDA
     viewModel: MainSelectionViewModel = viewModel()
 ) {
     val selectedProfile by viewModel.selectedProfile.collectAsState()
@@ -107,7 +108,7 @@ fun MainSelectionScreen(
                 Button(
                     onClick = {
                         viewModel.selectProfile("Inicio")
-                        onInicioClicked()
+                        onInicioClicked()  // Navega al login
                     },
                     modifier = Modifier
                         .fillMaxWidth()
@@ -124,7 +125,10 @@ fun MainSelectionScreen(
                 Spacer(modifier = Modifier.height(16.dp))
 
                 OutlinedButton(
-                    onClick = { viewModel.selectProfile("Registrarse") },
+                    onClick = {
+                        viewModel.selectProfile("Registrarse")
+                        onRegistrarseClicked()
+                    },
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(50.dp)

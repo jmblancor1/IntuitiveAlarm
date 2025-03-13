@@ -1,24 +1,38 @@
 package co.edu.uniandes.intuitivealarms.screens
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.PasswordVisualTransformation
-import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -26,9 +40,8 @@ import co.edu.uniandes.intuitivealarms.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LoginScreen(
-    onCloseClicked: () -> Unit = {},
-    onRegistrarseClicked: () -> Unit = {}
+fun RegistrarseScreen(
+    onCloseClicked: () -> Unit = {}
 ) {
     val backgroundBrush = Brush.verticalGradient(
         colors = listOf(
@@ -39,7 +52,28 @@ fun LoginScreen(
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
-    Scaffold(containerColor = Color.Transparent) { innerPadding ->
+    Scaffold(
+        containerColor = Color.Transparent,
+        topBar = {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp),
+                contentAlignment = Alignment.TopEnd
+            ) {
+                IconButton(
+                    onClick = { onCloseClicked() },
+                    modifier = Modifier.padding(8.dp)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Close,
+                        contentDescription = "Cerrar",
+                        tint = Color.Black
+                    )
+                }
+            }
+        }
+    ) { innerPadding ->
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -52,23 +86,22 @@ fun LoginScreen(
                     .padding(horizontal = 16.dp, vertical = 24.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-
                 Spacer(modifier = Modifier.height(8.dp))
 
-                Image(
+                Icon(
                     painter = painterResource(id = R.drawable.reloj),
                     contentDescription = null,
+                    tint = Color.Unspecified,
                     modifier = Modifier
                         .size(80.dp)
                         .clip(CircleShape)
-                        .background(Color(0xFFF5F5F5)),
-                    contentScale = ContentScale.Fit
+                        .background(Color(0xFFF5F5F5))
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
 
                 Text(
-                    text = "Hola, Bienvenido!!",
+                    text = "Hola, Regístrate!!",
                     style = MaterialTheme.typography.headlineMedium.copy(
                         fontWeight = FontWeight.Bold
                     ),
@@ -78,7 +111,7 @@ fun LoginScreen(
                 Spacer(modifier = Modifier.height(8.dp))
 
                 Text(
-                    text = "Bienvenido a Intuitive Alarm, Inicia Sesión y prepárate para despertar",
+                    text = "Bienvenido a Intuitive Alarm.\nRegístrate y prepárate para despertar.",
                     style = MaterialTheme.typography.bodyMedium,
                     color = Color.Black,
                     fontSize = 15.sp,
@@ -88,7 +121,6 @@ fun LoginScreen(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Campo de Email en un contenedor blanco ovalado
                 RoundedWhiteTextField(
                     value = email,
                     onValueChange = { email = it },
@@ -97,26 +129,22 @@ fun LoginScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Campo de Clave en un contenedor blanco ovalado
                 RoundedWhiteTextField(
                     value = password,
                     onValueChange = { password = it },
-                    placeholderText = "Ingrese su clave",
+                    placeholderText = "Ingresa tu clave",
                     isPassword = true
                 )
 
                 Spacer(modifier = Modifier.height(8.dp))
 
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.End
-                ) {
-                    Text(
-                        text = "Recuperar Clave?",
-                        color = Color.Black,
-                        fontSize = 14.sp
-                    )
-                }
+                Text(
+                    text = "Al registrarte aceptas los términos y condiciones de Intuitive Alarm",
+                    color = Color.Black,
+                    fontSize = 14.sp,
+                    modifier = Modifier.padding(horizontal = 16.dp),
+                    textAlign = TextAlign.Center
+                )
 
                 Spacer(modifier = Modifier.height(24.dp))
 
@@ -133,61 +161,10 @@ fun LoginScreen(
                         contentColor = Color.White
                     )
                 ) {
-                    Text(text = "Acceder", fontSize = 18.sp)
-                }
-
-                Spacer(modifier = Modifier.height(32.dp))
-
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.Center
-                ) {
-                    Text(
-                        text = "No tienes cuenta? Regístrate",
-                        color = Color.Black,
-                        fontSize = 15.sp,
-                        modifier = Modifier.clickable {
-                            // Navega a la pantalla de registro
-                            onRegistrarseClicked()
-                        }
-                    )
+                    Text(text = "Registrarse", fontSize = 18.sp)
                 }
             }
         }
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun RoundedWhiteTextField(
-    value: String,
-    onValueChange: (String) -> Unit,
-    placeholderText: String,
-    isPassword: Boolean = false
-) {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(56.dp)
-            .clip(RoundedCornerShape(50))
-            .background(Color.White),
-        contentAlignment = Alignment.CenterStart
-    ) {
-        OutlinedTextField(
-            value = value,
-            onValueChange = onValueChange,
-            placeholder = { Text(placeholderText, color = Color.Gray) },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp),
-            shape = RoundedCornerShape(0.dp),
-            colors = TextFieldDefaults.outlinedTextFieldColors(
-                containerColor = Color.Transparent,
-                focusedBorderColor = Color.Transparent,
-                unfocusedBorderColor = Color.Transparent
-            ),
-            keyboardOptions = KeyboardOptions(autoCorrect = false),
-            visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None
-        )
-    }
-}
