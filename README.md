@@ -58,6 +58,12 @@
 - **Móvil:**  
   [Ver prototipo interactivo en Figma (Móvil)](https://www.figma.com/proto/tsXBwjDG1QVqnta8M1WYhh/Intuitive-Alarms-Iterativo-(3)?node-id=56768-1522&t=9uJDxpVp2yMkVPJn-0&scaling=scale-down&content-scaling=fixed&page-id=1%3A1632&starting-point-node-id=56768%3A1460)
 
+---
+
+## :link: Documentación Adicional
+
+- [**Readme Versión Móvil**](https://github.com/jmblancor1/IntuitiveAlarm/tree/main/movil#readme)
+- [**Readme Versión Web**](https://github.com/jmblancor1/IntuitiveAlarm/tree/main/web#readme)
 
 ## :rocket: Notas Finales
 Este proyecto integra funcionalidades en plataformas móviles y web, ofreciendo una experiencia de usuario coherente y adaptada a diferentes necesidades, con especial énfasis en animaciones y facilidad de uso.
